@@ -1,6 +1,5 @@
 from flask import Flask, jsonify
 from flask import request
-
 import json
 import requests
 import json
@@ -60,6 +59,12 @@ def suggestGithub():
         return jsonify({"payload":{"url":urls},"error":{"status":validate}})
     else:
         return jsonify({"error":{"status":validate}})
+
+# to get the leaderbord from the accounts
+@app.route('/leaderbord', methods=['POST'])
+def suggestRanks():
+    user = req.form
+    return 
 
 
 
